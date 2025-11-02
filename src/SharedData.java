@@ -8,6 +8,7 @@ public class SharedData
 	private boolean flag;
 	private final int b;
 	
+
 	public SharedData(ArrayList<Integer> array, int b) {
 		
 		this.array = array;
