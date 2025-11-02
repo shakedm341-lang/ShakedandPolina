@@ -1,12 +1,12 @@
 public class SharedData 
 {
 	
-	private int [] array;
+	private int ArrayList<Integer> array;
 	private boolean [] winArray;
 	private boolean flag;
 	private final int b;
 	
-	public SharedData(int[] array, int b) {
+	public SharedData(ArrayList<Integer> array, int b) {
 		
 		this.array = array;
 		this.b = b;
