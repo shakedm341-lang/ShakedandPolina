@@ -8,6 +8,10 @@ public class ThreadCheckArray implements Runnable
 	ArrayList<Integer> array;
 	int b;
 	
+	/**
+	 * Constructor: initializes the thread with shared data
+	 * @param sd
+	 */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -19,6 +23,11 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.size()];
 	}
 	
+	/**
+	 * Recursively checks combinations in the array
+	 * @param n
+	 * @param b
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -51,7 +60,9 @@ public class ThreadCheckArray implements Runnable
 		}	
 		rec(n-1, b);
 	}
-
+	/**
+	 * Runs the thread: checks the array and updates winArray if a condition is met
+	 */
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
